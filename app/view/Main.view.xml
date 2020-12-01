@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:c="sap.ui.commons" xmlns:comp="printa4.component" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:t="sap.ui.table" xmlns:u="sap.ui.unified" controllerName="printa4.controller.Main">
+	<Page title="{i18n&gt;printa4.view.title}" class="myPage" showHeader="true" enableScrolling="false">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button icon="sap-icon://nav-back" press="toBackPage" />
+				</contentLeft>
+				<contentMiddle>
+					<Label text="{i18n&gt;printa4.view.title}" class="sapMTitle sapMTitleStyleAuto sapMTitleNoWrap sapUiTinyMarginEnd" />
+				</contentMiddle>
+				<contentRight>
+					<Label text="{i18n&gt;printa4.view.user.label}" class="sapUiTinyMarginEnd" />
+					<Label text="{info&gt;/user/name}" class="sapUiMediumMarginEnd" />
+					<Button press="logOff" icon="sap-icon://log" />
+					<Image id="DLLogo" class="DLLogo" src="images/Delonghi.png" densityAware="false" height="75%" />
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<VBox alignItems="Center">
+				<Button icon="sap-icon://print" type="Emphasized" text="Stampa" />
+				<HBox alignItems="Center" justifyContent="SpaceBetween">
+					<Label text="Codice" width="10rem" class="sapUiTinyMargin" />
+					<Input width="25rem" id="inputCodice" />
+				</HBox>
+				<HBox alignItems="Center">
+					<Label text="Descrizione" width="10rem" class="sapUiTinyMargin" />
+					<Text width="25rem" id="textDescrizione" text="" />
+				</HBox>
+				<HBox alignItems="Center">
+					<Label text="Quantità per Scatola" width="10rem" class="sapUiTinyMargin" />
+					<Text width="25rem" id="textZZQFB" />
+				</HBox>
+				<HBox alignItems="Center">
+					<Label text="Scatole per Pallet" width="10rem" class="sapUiTinyMargin" />
+					<Text width="25rem" id="textZZBFP" />
+				</HBox>
+				<HBox alignItems="Center">
+					<Label text="Quantità" width="10rem" class="sapUiTinyMargin" />
+					<Input width="25rem" id="inputQuantita" />
+				</HBox>
+				<HBox alignItems="Center">
+					<Label text="Data" width="10rem" class="sapUiTinyMargin" />
+					<DatePicker width="25rem" id="datePicker" valueFormat="dd/MM/yyyy" />
+				</HBox>
+				<HBox alignItems="Center">
+					<Label text="Operatore" width="10rem" class="sapUiTinyMargin" />
+					<Input width="25rem" id="inputOperatore" />
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

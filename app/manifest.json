@@ -1,0 +1,91 @@
+{
+    "_version": "1.0.0",
+    "sap.app": {
+        "id": "printa4",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "printa4",
+        "description": "Stampa Bindelli"
+    },
+
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_belize",
+            "sap_bluecrystal"
+        ]
+    },
+
+    "sap.ui5": {
+        "rootView": "printa4.view.App",
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewPath": "printa4.view",
+                "controlId": "rootControl",
+                "controlAggregation": "pages",
+                "viewType": "XML"
+            },
+            "routes": [
+                {
+                    "name": "MainR",
+                    "pattern": "",
+                    "target": "MainV"
+                }
+            ],
+            "targets": {
+                "MainV": {
+                    "viewName": "Main",
+                    "viewPath": "printa4.view",
+                    "viewLevel": 1
+                }
+            }
+        },
+        "dependencies": {
+            "minUI5Version": "1.30.0",
+            "libs": {
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "printa4.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [{
+                    "uri": "css/style.css"
+                }, {
+                    "uri": "css/materialize.css",
+                    "id": "materialize"
+                }, {
+                    "uri": "css/normalize.css",
+                    "id": "normalize"
+                }]
+        }
+    }
+}
